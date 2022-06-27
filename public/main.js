@@ -57,7 +57,19 @@ var game = function () {
         }
     }
 
+    //Cambia de dirección la pelota
     function checkStateBall() {
+
+        if(collidePlayer2()) {
+            ball.direction = 2;
+            if(ball.state == 1) ball.state = 3;
+            if(ball.state == 2) ball.state = 4;
+        }else if(collidePlayer1()) {
+            ball.direction = 1;
+            if(ball.state == 3) ball.state = 1;
+            if(ball.state == 4) ball.state = 2;
+        }
+
         if(ball.direction === 1) {
             if(ball.offsetTop >= height) ball.state = 2;
             else if(ball.offsetTop <=0) ball.state =1;
@@ -67,11 +79,23 @@ var game = function () {
         }
     }
 
-    function collidePlayer1() {
+    //Colisiones con el Jugador1
+    function collidePlayer1(){
+        if(ball.offsetLeft <= (barLeft.clientWidth) &&
+           ball.offsetTop >= barLeft.offsetTop &&
+           ball.offsetTop <= (barLeft.offsetTop + barLeft.clientHeight)){
+            return true;
+        }
         return false;
     }
 
-    function collidePlayer2() {
+    //Colisiones con el Jugador2
+    function collidePlayer2(){
+        if(ball.offsetLeft >= (width-barRight.clientWidth) &&
+           ball.offsetTop >= barRight.offsetTop &&
+           ball.offsetTop <= (barRight.offsetTop + barRight.clientHeight)){
+            return true;
+        }
         return false;
     }
 
