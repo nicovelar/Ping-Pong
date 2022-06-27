@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(req, res) {
+app.get('/https://nicovelar.github.io/Ping-Pong', function(req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
   });
 
