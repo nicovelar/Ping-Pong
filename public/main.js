@@ -32,6 +32,7 @@ var game = function () {
     function play() {
         moveBall()
         moveBar()
+        checkIfLost()
     }
 
     //Selecciona uno de los 4 casos y los mueve según el caso
@@ -71,10 +72,10 @@ var game = function () {
         }
 
         if(ball.direction === 1) {
-            if(ball.offsetTop >= height) ball.state = 2;
+            if(ball.offsetTop >= height -10) ball.state = 2;
             else if(ball.offsetTop <=0) ball.state =1;
         }else {
-            if(ball.offsetTop >= height) ball.state = 4;
+            if(ball.offsetTop >= height -10) ball.state = 4;
             else if(ball.offsetTop <=0) ball.state =3;
         }
     }
@@ -139,6 +140,23 @@ var game = function () {
         if (e.key == "ArrowUp" || e.key == "ArrowDown")
             player2.keyPress = false;
     } 
+
+    //Detecta si la pelota se fue de rango
+    function checkIfLost(){
+        if(ball.offsetLeft >= width){
+            stop();
+            setTimeout(()=>{
+                alert("Punto para el Jugador 1, Recarga la página");
+            },400);
+        }
+        if(ball.offsetLeft <= 0){
+            stop();
+            setTimeout(()=>{
+                alert("Punto para el Jugador 2, Recarga la página");
+            },400);
+           
+        }
+    }
 
     //Limpia el intervalo para parar el juego
     function stop() {
