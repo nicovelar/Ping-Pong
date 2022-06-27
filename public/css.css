@@ -1,0 +1,40 @@
+body, html {
+    height: 99%;
+    background-color: black;
+}
+
+#ball {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    position: absolute;
+    left: 10px;
+    top:0px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.bar{
+    width: 20px;
+    height: 100px;
+    background: black;
+    border: 2px solid white;
+}
+
+#barLeft {
+    top: 20px;
+    float:left;
+    position: absolute;
+}
+
+#barRight {
+    top:20px;
+    right: 0px;
+    position: absolute;
+}
+
+#line {
+    width: 50%;
+    border-right: white dashed 5px;
+    height: 100%;
+}
