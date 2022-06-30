@@ -1,7 +1,7 @@
 # Ping-Pong
 This is a classic Ping-Pong.
 
-All the code is in the branch master.
+All the code is in the gh-pages.
 
 The page for run this is: https://nicovelar.github.io/Ping-Pong/
 
