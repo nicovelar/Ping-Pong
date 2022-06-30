@@ -145,23 +145,32 @@ var game = function () {
     function checkIfLost(){
         if(ball.offsetLeft >= width){
             stop();
+            setScore1()
             setTimeout(()=>{
-                alert("Punto para el Jugador 1, Recarga la página");
+                alert("Punto para el Jugador 1");
+                ganoJugador1();
+                location.reload();
             },400);
+           
+           
         }
         if(ball.offsetLeft <= 0){
             stop();
+            setScore2()
             setTimeout(()=>{
-                alert("Punto para el Jugador 2, Recarga la página");
+                alert("Punto para el Jugador 2");
+                ganoJugador2();
+                location.reload();
             },400);
+           
+            
            
         }
     }
 
     //Limpia el intervalo para parar el juego
     function stop() {
-        clearInterval(controlGame);
-        document.body.style.backgroundImage = "url(/images/157364-abstract-red-background-vector-illustration.jpg)";
+        clearInterval(controlGame)
     }
     
  

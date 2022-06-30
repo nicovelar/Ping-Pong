@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css.css">
+    <link rel="stylesheet" href="/public/css.css">
     <title>Ping Pong</title>
 </head>
-<body>
+<body onload="initialScore1(),initialScore2()">
+   <div id="score1" ></div>
+   <div id="score2" ></div>
    <div id="ball"></div>
    <div id="barLeft" class="bar"></div>
    <div id="barRight" class="bar"></div>
    <div id="line"></div>
-<script src="./public/main.js"></script>
+<script src="/public/main.js"></script>
+<script src="/public/score.js"></script>
 </body>
 </html>

@@ -1,12 +1,12 @@
 body, html {
     height: 99%;
-    background-color: black;
+    background-image: url("./images/157364-abstract-red-background-vector-illustration.jpg");
 }
 
 #ball {
     width: 25px;
     height: 25px;
-    background-color: black;
+    background-image: url("./images/kisspng-golf-balls-clip-art-golf-5ab8a94d9635d0.0668179415220514056153.jpg");
     position: absolute;
     left: 10px;
     top:0px;
@@ -17,10 +17,22 @@ body, html {
 .bar{
     width: 20px;
     height: 100px;
-    background: black;
+    background-image: url("./images/textura-del-fondo-metal-placa-diamante-103468644.jpg");
     border: 2px solid white;
 }
 
+#score1 {
+    top: 20px;
+    float:left;
+    left: 300px;
+    position: absolute;
+}
+
+#score2 {
+    top:20px;
+    right: 300px;
+    position: absolute;
+}
 #barLeft {
     top: 20px;
     float:left;
